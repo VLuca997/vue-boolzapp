@@ -31,131 +31,397 @@
 
     <!-- WEB APPLICATION WHATSAPP -->
     <main>
-
+        <!-- Vue Axios CONTAINER -->
         <div id="app" class="web-app">
+
             <div class="my-container ">
+                <!-- USER EXPERIENCE -->
                 <div class="left-side"> 
 
-                    <div class="header-account">
-                        <nav class="navbar border">
-                            <div class="container-fluid">
-                                <a class="navbar-brand">Luca</a>
-                                <div class="d-flex">
-                                    <i class="fa-solid fa-circle-notch"></i>
-                                    <i class="fa-solid fa-message"></i>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <div class="sticky-top">
+
+                        <div class="header-account ">
+
+                            <nav class="navbar border">
+
+                                <div class="container-fluid">
+
+                                    <div class="d-flex">
+                                        <!-- IMG USER -->
+                                        <img src="" alt="" class="rounded-image">
+                                        <!-- USER NAME -->
+                                        <a class="navbar-brand ">Luca</a>
+
+                                    </div>
+                                    <!-- ICON USER -->
+                                    <div class="d-flex">
+
+                                        <i class="fa-solid fa-circle-notch"></i>
+
+                                        <i class="fa-solid fa-message"></i>
+
+                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                    </div>
+
                                 </div>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="cardes mb-0">
-                        <i class="fa-solid fa-bell-slash fa-xl rounded-image"></i>
-                        <div class="cardes-contentes">
-                            <h3 class="cardes-title fw-bold">Ricevi notifiche di nuovi messaggi</h3>
-                            <a class="cardes-description">Attiva notifiche desktop</a>
+
+                            </nav>
+
                         </div>
-                    </div>
-                    <div class="search-chat ">
-                        <nav class="navbar bg-body-tertiary">
-                            <form class="container-fluid">
-                                <div class="input-group">
-                                    <span class="input-group-text" id="basic-addon1">
+                        <!-- SILENT NOTIFICS -->
+                        <div class="incoming-chat mb-0">
 
-                                        <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-bell-slash fa-xl rounded-image"></i>
 
-                                    </span>
+                            <div class="incoming-chat-contentes">
 
-                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <h3 class="incoming-chat-title fw-bold">Ricevi notifiche di nuovi messaggi</h3>
 
-                                </div>
+                                <a class="incoming-chat-description">Attiva notifiche desktop</a>
 
-                            </form>
+                            </div>
 
-                        </nav>
+                        </div>
+                        <!-- CHAT SEARCHER -->
+                        <div class="search-chat ">
+
+                            <nav class="navbar bg-body-tertiary">
+
+                                <form class="container-fluid">
+
+                                    <div class="input-group">
+
+                                        <span class="input-group-text" id="basic-addon1">
+
+    
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+    
+                                        </span>
+    
+                                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+    
+                                    </div>
+    
+                                </form>
+    
+                            </nav>
+                            
+                        </div>
                         
                     </div>
-                    
 
+                    <div>
+                        <!-- INCOMING CHAT -->
+                        <ul id="incomingChats" class="list-group">
 
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
 
-                    <ul class="list-group list-group ">
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <img src="" alt="" class="rounded-image">
-                                <div class="fw-bold">Subheading</div>
-                                Content for list item
-                            </div>
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                Content for list item
-                            </div>
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                Content for list item
-                            </div>
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                Content for list item
-                            </div>
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                Content for list item
-                            </div>
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                Content for list item
-                            </div>
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                Content for list item
-                            </div>
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-start">
-                            <div class="ms-2 me-auto">
-                                <div class="fw-bold">Subheading</div>
-                                Content for list item
-                            </div>
-                            <span class="badge bg-primary rounded-pill">14</span>
-                        </li>
-                    </ul>
+                                <div class="ms-2 me-auto">
 
+                                    <div class="chat m-0">
 
+                                        <img src="" class="rounded-image" alt="">
 
-                </div>
+                                        <div class="chat-contentes">
 
-                <div class="right-side ">
-                    <div class="header-account">
-                        <nav class="navbar  border">
-                            <div class="container-fluid">
-                                <a class="navbar-brand">Luca</a>
-                                <div class="d-flex">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    <i class="fa-solid fa-paperclip"></i>
-                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            <h3 class="chat-title fw-bold">UTENTE</h3>
+
+                                            <p class="chat-description">Ultimo messaggio inviato</p>
+
+                                        </div>
+
+                                    </div>
+
                                 </div>
-                            </div>
-                        </nav>
+                                
+                                <p class="fw-lighter Time-Data-Chat">12:00</p>
+
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+
+                                <div class="ms-2 me-auto">
+
+                                    <div class="chat m-0">
+
+                                        <img src="" class="rounded-image" alt="">
+
+                                        <div class="chat-contentes">
+
+                                            <h3 class="chat-title fw-bold">UTENTE</h3>
+
+                                            <p class="chat-description">Ultimo messaggio inviato</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <p class="fw-lighter Time-Data-Chat">12:00</p>
+
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+
+                                <div class="ms-2 me-auto">
+
+                                    <div class="chat m-0">
+
+                                        <img src="" class="rounded-image" alt="">
+
+                                        <div class="chat-contentes">
+
+                                            <h3 class="chat-title fw-bold">UTENTE</h3>
+
+                                            <p class="chat-description">Ultimo messaggio inviato</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <p class="fw-lighter Time-Data-Chat">12:00</p>
+
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+
+                                <div class="ms-2 me-auto">
+
+                                    <div class="chat m-0">
+
+                                        <img src="" class="rounded-image" alt="">
+
+                                        <div class="chat-contentes">
+
+                                            <h3 class="chat-title fw-bold">UTENTE</h3>
+
+                                            <p class="chat-description">Ultimo messaggio inviato</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <p class="fw-lighter Time-Data-Chat">12:00</p>
+
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+
+                                <div class="ms-2 me-auto">
+
+                                    <div class="chat m-0">
+
+                                        <img src="" class="rounded-image" alt="">
+
+                                        <div class="chat-contentes">
+
+                                            <h3 class="chat-title fw-bold">UTENTE</h3>
+
+                                            <p class="chat-description">Ultimo messaggio inviato</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <p class="fw-lighter Time-Data-Chat">12:00</p>
+
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+
+                                <div class="ms-2 me-auto">
+
+                                    <div class="chat m-0">
+
+                                        <img src="" class="rounded-image" alt="">
+
+                                        <div class="chat-contentes">
+                                            
+                                            <h3 class="chat-title fw-bold">UTENTE</h3>
+
+                                            <p class="chat-description">Ultimo messaggio inviato</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <p class="fw-lighter Time-Data-Chat">12:00</p>
+
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+
+                                <div class="ms-2 me-auto">
+
+                                    <div class="chat m-0">
+
+                                        <img src="" class="rounded-image" alt="">
+
+                                        <div class="chat-contentes">
+
+                                            <h3 class="chat-title fw-bold">UTENTE</h3>
+
+                                            <p class="chat-description">Ultimo messaggio inviato</p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <p class="fw-lighter Time-Data-Chat">12:00</p>
+
+                            </li>
+
+                            <li class="list-group-item d-flex justify-content-between align-items-start">
+
+                                <div class="ms-2 me-auto">
+
+                                    <div class="chat m-0">
+
+                                        <img src="" class="rounded-image" alt="">
+
+                                        <div class="chat-contentes">
+
+                                            <h3 class="chat-title fw-bold">UTENTE</h3>
+
+                                            <p class="chat-description">Ultimo messaggio inviato</p>
+                                            
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <p class="fw-lighter Time-Data-Chat">12:00</p>
+
+                            </li>
+
+                        </ul>
+
                     </div>
+
+                    
+                        
                 </div>
+                <!-- MESSAGING CHAT -->
+                <div class="right-side sticky-top ">
+                    
+                    <div class="header-account">
+
+                        <nav class="navbar  border">
+
+                            <div class="container-fluid">
+
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+
+                                    <div class="ms-2 me-auto">
+                                        <!-- HEADER MESSAGING CHAT FRIENDS ACCOUNT -->
+                                        <div class="chat m-0">
+
+                                            <img src="" class="rounded-image" alt="">
+
+                                            <div class="chat-contentes">
+
+                                                <h3 class="chat-title fw-bold">UTENTE</h3>
+
+                                                <p class="chat-description">Ultimo accesso oggi alle 12:00</p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </li>
+                                <!-- ICON INPUT  -->
+                                <div class="d-flex">
+
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                                    <i class="fa-solid fa-paperclip"></i>
+
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                                </div>
+
+                            </div>
+
+                        </nav>
+
+                    </div>
+
+                    <div class="chat-container">
+
+                        <div class="messages">
+                            
+                            <div id="user-messages" class="message user">
+
+                                <div class="text">Ciao, come stai?</div>
+
+                            </div>
+
+                            <div class="message">
+
+                                <div class="text">Sto bene, grazie!</div>
+
+                            </div>
+                            
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div class="container-fluid">
+
+                        <div class="row">
+
+                            <div class="col-md-12">
+
+                                <div class="chat-messages">
+
+                                    
+                                </div>
+
+                                <div class="input-group chat-input">
+
+                                    <div class=" m-3 text-center">
+
+                                        <i class="fa-regular fa-face-laugh-wink fa-lg"></i>
+
+                                    </div>
+                                    
+                                    <textarea id="message-input" class="form-control" placeholder="Scrivi un messaggio" >
+
+                                    </textarea>
+
+                                    <div class="input-group-append m-3 text-center">
+
+                                        <i class="fa-solid fa-microphone fa-lg"></i>
+                                        
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div> 
+
+                </div>
+
+
             </div>
     
         </div>
