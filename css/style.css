@@ -6,8 +6,6 @@
 
 /* GENERAL CONTAINER */
 .web-app{
-        
-        
         margin: 0 auto;
 }
 
@@ -40,7 +38,7 @@
         border-right: 1px solid grey;
         border-bottom: 1px solid grey;
         border-left: 1px solid grey;
-        
+        background-image: url(../img/mine.jpg);
 
 }
 
@@ -66,7 +64,7 @@
         background-color: rgb(255, 255, 255);
 }
 
-/* CARD INCOMING USERS CHAT */
+/* CARD INCOMING USERS CHATS */
 
 .incoming-chat {
         display: flex;
