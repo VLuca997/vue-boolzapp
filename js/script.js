@@ -2,7 +2,7 @@
     const {createApp } = Vue;
     const app = createApp({
         data(){
-            return {
+            return {//ARRAY OGGETTI CHAT
                 contacts: [
                         {
                             name: 'Michele',
