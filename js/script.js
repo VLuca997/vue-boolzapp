@@ -1,5 +1,5 @@
 // INIZIALIZZO VUE
-    const [ createApp ] = Vue;
+    const {createApp } = Vue;
     const app = createApp({
         data(){
             return {
@@ -165,6 +165,6 @@
         },
         methods: {
             //PRIMO METODO PER VISUALIZZARE DINAMICAMENTE GLI UTENTI NELLA LISTA CONTATTI:
-            
+
         },
     }); app.mount('#app');
