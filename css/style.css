@@ -1,39 +1,100 @@
 /*
 
-        HEADER
+        WEB-APP
 
 */
 
+/* GENERAL CONTAINER */
+.web-app{
+        max-width: 1200px;
+        margin: 0 auto;
+}
+
+.my-container {
+        display: flex;
+        height: 800px;
+        padding: 20px;
+        margin: 0 auto;
+
+}
+
+
+
+/* WHATSAPP R/L CONTENT */
+.left-side {
+        flex: 0 0 30%; /* Occupa il 30% dello spazio disponibile */
+        background-color: white;
+        
+        border: 2px solid darkred;
+}
+
+.right-side {
+        flex: 1; /* Occupa il restante spazio disponibile */
+        background-color: yellow;
+        
+        border: 2px solid darkred;
+
+}
 
 
 
 
-
-
-/*
-
-        MAIN
-
-*/
+/* NAVBAR */
+.navbar{
+        background-color: rgb(234, 234, 234)
+}
 
 
 
 
+/* ICON */
+.header-account i {
+        margin: 5px;
+        color: rgb(177, 177, 177)
+}
+.cardes i {
+        text-align: center;
+        line-height: 50px;
+        color: rgb(142, 218, 252);
+        background-color: white;
+}
+
+/* CARD */
+.cardes {
+        display: flex;
+        align-items: center;
+        background-color: rgb(142, 218, 252);
+        padding: 10px;
+        
+        margin-bottom: 10px;
+      }
+      
+      .rounded-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+        
+      }
+      
+      .cardes-content {
+        flex: 1;
+      }
+      
+      .cardes-title {
+        margin: 0;
+        font-size: 16px;
+      }
+      
+      .cardes-description {
+        margin: 0;
+        font-size: 14px;
+      }
+      
+
+/* IMAGES */
 
 
 
 
-/*
-
-        FOOTER
-
-*/
-
-
-
-
-/*
-
-        DEBUG
-
-*/
+/* SPECIAL SELECTION */
