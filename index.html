@@ -49,9 +49,9 @@
 
                                     <div class="d-flex">
                                         <!-- IMG USER -->
-                                        <img src="" alt="" class="rounded-image">
+                                        <img  src="" alt="" class="rounded-image">
                                         <!-- USER NAME -->
-                                        <a class="navbar-brand ">Luca</a>
+                                        <a class="navbar-brand "> LUCA</a>
 
                                     </div>
                                     <!---------------------------------------->
@@ -120,19 +120,19 @@
                         <!-- INCOMING CHAT -->
                         <ul id="incomingChats" class="list-group">
 
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <li v-for="singleContact in contacts" class="list-group-item d-flex justify-content-between align-items-start">
 
                                 <div class="ms-2 me-auto">
 
                                     <div class="chat m-0">
 
-                                        <img src="" class="rounded-image" alt="">
+                                        <img :src="singleContact.avatar" class="rounded-image" :alt="singleContact.name">
 
                                         <div class="chat-contentes">
 
-                                            <h3 class="chat-title fw-bold">UTENTE</h3>
+                                            <h3 class="chat-title fw-bold">{{singleContact.name}}</h3>
 
-                                            <p class="chat-description">Ultimo messaggio inviato</p>
+                                            <p class="chat-description">{{singleContact.messages[0].message}}</p>
 
                                         </div>
 
@@ -144,173 +144,7 @@
 
                             </li>
 
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-
-                                <div class="ms-2 me-auto">
-
-                                    <div class="chat m-0">
-
-                                        <img src="" class="rounded-image" alt="">
-
-                                        <div class="chat-contentes">
-
-                                            <h3 class="chat-title fw-bold">UTENTE</h3>
-
-                                            <p class="chat-description">Ultimo messaggio inviato</p>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="fw-lighter Time-Data-Chat">12:00</p>
-
-                            </li>
-
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-
-                                <div class="ms-2 me-auto">
-
-                                    <div class="chat m-0">
-
-                                        <img src="" class="rounded-image" alt="">
-
-                                        <div class="chat-contentes">
-
-                                            <h3 class="chat-title fw-bold">UTENTE</h3>
-
-                                            <p class="chat-description">Ultimo messaggio inviato</p>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="fw-lighter Time-Data-Chat">12:00</p>
-
-                            </li>
-
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-
-                                <div class="ms-2 me-auto">
-
-                                    <div class="chat m-0">
-
-                                        <img src="" class="rounded-image" alt="">
-
-                                        <div class="chat-contentes">
-
-                                            <h3 class="chat-title fw-bold">UTENTE</h3>
-
-                                            <p class="chat-description">Ultimo messaggio inviato</p>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="fw-lighter Time-Data-Chat">12:00</p>
-
-                            </li>
-
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-
-                                <div class="ms-2 me-auto">
-
-                                    <div class="chat m-0">
-
-                                        <img src="" class="rounded-image" alt="">
-
-                                        <div class="chat-contentes">
-
-                                            <h3 class="chat-title fw-bold">UTENTE</h3>
-
-                                            <p class="chat-description">Ultimo messaggio inviato</p>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="fw-lighter Time-Data-Chat">12:00</p>
-
-                            </li>
-
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-
-                                <div class="ms-2 me-auto">
-
-                                    <div class="chat m-0">
-
-                                        <img src="" class="rounded-image" alt="">
-
-                                        <div class="chat-contentes">
-                                            
-                                            <h3 class="chat-title fw-bold">UTENTE</h3>
-
-                                            <p class="chat-description">Ultimo messaggio inviato</p>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="fw-lighter Time-Data-Chat">12:00</p>
-
-                            </li>
-
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-
-                                <div class="ms-2 me-auto">
-
-                                    <div class="chat m-0">
-
-                                        <img src="" class="rounded-image" alt="">
-
-                                        <div class="chat-contentes">
-
-                                            <h3 class="chat-title fw-bold">UTENTE</h3>
-
-                                            <p class="chat-description">Ultimo messaggio inviato</p>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="fw-lighter Time-Data-Chat">12:00</p>
-
-                            </li>
-
-                            <li class="list-group-item d-flex justify-content-between align-items-start">
-
-                                <div class="ms-2 me-auto">
-
-                                    <div class="chat m-0">
-
-                                        <img src="" class="rounded-image" alt="">
-
-                                        <div class="chat-contentes">
-
-                                            <h3 class="chat-title fw-bold">UTENTE</h3>
-
-                                            <p class="chat-description">Ultimo messaggio inviato</p>
-                                            
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <p class="fw-lighter Time-Data-Chat">12:00</p>
-
-                            </li>
+                            
 
                         </ul>
 
