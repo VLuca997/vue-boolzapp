@@ -102,10 +102,10 @@
                                 
                         },
                         {
-                        name: 'Claudia',
-                        avatar: './img/avatar_5.jpg',
-                        visible: true,
-                        messages: [{
+                            name: 'Claudia',
+                            avatar: './img/avatar_5.jpg',
+                            visible: true,
+                            messages: [{
                                     date: '10/01/2020 15:30:55',
                                     message: 'Ciao Claudia, hai novità?',
                                     status: 'sent'
@@ -160,11 +160,13 @@
                                 
                         }
                     ],
+                    activeContact: {},
                 }
-
             },
             methods: {
-                //PRIMO METODO PER VISUALIZZARE DINAMICAMENTE GLI UTENTI NELLA LISTA CONTATTI:
-
+                selectContact(contact) {
+                    this.activeContact = contact;
+                }
+                
             },
     }); app.mount('#app');

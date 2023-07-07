@@ -10,9 +10,9 @@
 }
 
 .my-container {
-        max-width: 1200px;
+        max-width: 90%;
         display: flex;
-        height: 700px;
+        height: 100vh;
         padding: 20px;
         margin: 0 auto;
 }
@@ -179,4 +179,8 @@
 
 .message.user .text {
         background-color: #dcf8c6;
+}
+
+.list-group-item:hover {
+        background-color: rgba(142, 218, 252,0.3);
 }
