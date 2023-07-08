@@ -49,9 +49,9 @@
 
                                     <div class="d-flex">
                                         <!-- IMG USER -->
-                                        <img  src="" alt="" class="rounded-image">
+                                        <img  src="img/avatar_io.jpg" alt="" class="rounded-image">
                                         <!-- USER NAME -->
-                                        <a class="navbar-brand ">LUCA</a>
+                                        <a class="navbar-brand ">Sofia</a>
 
                                     </div>
                                     <!---------------------------------------->
@@ -163,20 +163,20 @@
 
                             <div class="container-fluid">
 
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <li class="list-group-item not-hover d-flex justify-content-between align-items-start">
 
                                     <div class="ms-2 me-auto">
                                         <!---------------------------------------->
                                         <!-- HEADER MESSAGING CHAT FRIENDS ACCOUNT -->
                                         <div class="chat m-0">
 
-                                            <img src="" class="rounded-image" alt="">
+                                            <img :src="activeContact.avatar" class="rounded-image" alt="">
 
                                             <div class="chat-contentes">
 
-                                                <h3 class="chat-title fw-bold">UTENTE</h3>
+                                                <h3 class="chat-title fw-bold">{{ activeContact.name }}</h3>
 
-                                                <p class="chat-description">Ultimo accesso oggi alle 12:00</p>
+                                                <p class="chat-description">Ultimo accesso oggi alle:</p>
 
                                             </div>
 
@@ -206,12 +206,18 @@
                     <!-- MESSAGING ZONE -->
                     <div class="chat-container">
 
-                        <div class="messages">
+                        <div class="messages text-break">
                             <!-- CICLO PER GESTIRE LE CHAT NELLA CHAT-ZONE -->
                             <div v-for="(message, index) in activeContact.messages" :key="index" :class="message.status === 'sent' ? 'message user' : 'message'">
 
-                                <div class="text">{{message.message}}</div>
+                                <div class="text position-relative ">
+                                    
+                                    <div class="p-2">{{message.message}}</div>
 
+                                    <div class="received-at"><p class="chat-description">{{ activeContact.messages[activeContact.messages.length - 1].date }}</p></div>
+                                </div>
+
+                                
                             </div>
 
                         </div>
@@ -237,7 +243,7 @@
 
                                     </div>
                                     
-                                    <textarea id="message-input" class="form-control" placeholder="Scrivi un messaggio" >
+                                    <textarea v-model="newMessage" @keyup.enter="addMessage" id="message-input" class="form-control" placeholder="Scrivi un messaggio" >
 
                                     </textarea>
 

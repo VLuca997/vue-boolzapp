@@ -26,6 +26,95 @@
                             
                         },
                         {
+                            name: 'Francesco Totti',
+                            avatar: './img/avatar_2.jpg',
+                            visible: true,
+                            messages: [{
+
+                                    date: '20/03/2020 16:30:00',
+                                    message: 'Ao o si visto che colpo de Karatè? i gol cosi manco Messi',
+                                    status: 'received'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:35:00',
+                                    message: 'Selfie deeeeeeeerrrr pupoooooooneeeeeeeeeeeeee',
+                                    status: 'received'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro a Fadellì tacci tua, 2 go' uno appresso all'altro a Fadellì tacci tua, 2 go' uno appresso all'altro a Fadellì tacci tua, 2 go' uno appresso all'altro a Fadellì tacci tua, 2 go' uno appresso all'altro a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                {
+                                    date: '20/03/2020 16:30:55',
+                                    message: "a Fadellì tacci tua, 2 go' uno appresso all'altro ",
+                                    status: 'sent'
+                                },
+                                
+                            ],
+                                
+                        },
+                        {
                             name: 'Fabio',
                             avatar: './img/avatar_2.jpg',
                             visible: true,
@@ -161,12 +250,27 @@
                         }
                     ],
                     activeContact: {},
+                    
                 }
             },
             methods: {
                 selectContact(contact) {
                     this.activeContact = contact;
-                }
+                },
+                addMessage() {
+                    if (this.newMessage.trim() === '') {
+                         return; // Ignora l'aggiunta di un messaggio vuoto
+                    }
+                
+                    const newMessageObj = {
+                        date: new Date().toLocaleString(), // Utilizza la data corrente per il nuovo messaggio
+                        message: this.newMessage,
+                        status: 'sent',
+                    };
+                
+                    this.activeContact.messages.push(newMessageObj);
+                    this.newMessage = ''; // Pulisci l'input del messaggio
+                },
                 
             },
     }); app.mount('#app');

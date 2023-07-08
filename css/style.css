@@ -21,6 +21,8 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
+        background-color: white;
+        border: 1px solid white;
         
 }
 
@@ -150,7 +152,7 @@
 
 
 .chat-container {
-        max-height: 80vh;
+        max-height: 88vh;
         display: flex;
         flex-direction: column;
 }
@@ -163,24 +165,38 @@
 
 .message {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         margin-bottom: 10px;
 }
 
 .message.user {
-        justify-content: flex-start;
+        justify-content: flex-end;
 }
 
 .text {
         background-color: #f2f2f2;
-        padding: 10px;
+        padding: 15px;
         border-radius: 5px;
+        width: 48%;
 }
+.chat-description{
+        margin: 5px;
 
+}
 .message.user .text {
         background-color: #dcf8c6;
 }
 
-.list-group-item:hover {
+.list-group-item:hover:not(.not-hover) {
         background-color: rgba(142, 218, 252,0.3);
+}
+.received-at{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 11px;
+        margin-top: 1px;
+}
+.messages:last-child{
+        margin-bottom: 35px;
 }
