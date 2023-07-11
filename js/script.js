@@ -2,8 +2,10 @@
     const {createApp } = Vue;
     const app = createApp({
         data(){
-            return {//ARRAY OGGETTI CHAT
-                contacts: [
+            return {
+                searchQuery: '', // ricerca contatti 
+                activeContact: {}, // contatto attivo
+                contacts: [//ARRAY OGGETTI CHAT
                         {
                             name: 'Michele',
                             avatar: './img/avatar_1.jpg',
@@ -249,7 +251,6 @@
                                 
                         }
                     ],
-                    activeContact: {},
                     
                 }
             },
@@ -269,8 +270,27 @@
                     };
                 
                     this.activeContact.messages.push(newMessageObj);
-                    this.newMessage = ''; // Pulisci l'input del messaggio
-                },
+                    this.newMessage = ''; // Puliso l'input del messaggio
+                    
+                    setTimeout(() => {
+                        const responseMessageObj = {
+                            date: new Date().toLocaleString(),
+                            message: 'Ok!',
+                            status: 'received',
+                        };
+
+                        this.activeContact.messages.push(responseMessageObj);
+                      }, 3000); // Aggiungo il messaggio di risposta dopo 1 secondo
+                    },
+                    filteredContacts() {
+                        if (!this.searchQuery) {
+                            return this.contacts;
+                        }
                 
-            },
-    }); app.mount('#app');
+                        const search = this.searchQuery.toLowerCase();
+                        return this.contacts.filter(contact =>
+                            contact.name.toLowerCase().includes(search)
+                        );
+                    },
+                },
+    });app.mount('#app');

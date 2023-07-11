@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TITOLO PAGE -->
-    <title>Template</title>
+    <title>BoolZapp!</title>
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,7 +37,7 @@
             <div class="my-container ">
                 <!---------------------------------------->
                 <!-- USER EXPERIENCE -->
-                <div class="left-side"> 
+                <div class="left-side">
 
                     <div class="sticky-top">
 
@@ -98,31 +98,32 @@
 
                                         <span class="input-group-text" id="basic-addon1">
 
-    
-                                            <i class="fa-solid fa-magnifying-glass"></i>
-    
-                                        </span>
-    
-                                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
-    
-                                    </div>
-    
-                                </form>
-    
-                            </nav>
-                            
-                        </div>
-                        
-                    </div>
 
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                                        </span>
+
+                                        <input v-model="searchQuery" type="text" href="#" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+
+                                    </div>
+
+                                </form>
+
+                            </nav>
+
+                        </div>
+
+                    </div>
+                    
                     <div>
                         <!---------------------------------------->
                         <!-- INCOMING CHAT -->
-                        <ul id="incomingChats" class="list-group">
+                        <ul id="incomingChats" class="list-group" v-for="(contact, index) in contacts">
                             <!-- CICLO FOR DI VUE PER GESTIRE CLICCARE I CONTATTI E GENERARE MESSAGGI IN CHAT -->
-                            <li v-for="(contact, index) in contacts" 
-                            :key="index"  @click="selectContact(contact)" 
-                            class="list-group-item d-flex justify-content-between align-items-start">
+                            <li
+                            :key="index"  @click="selectContact(contact)"
+                            v-if="!searchQuery || contact.name.toLowerCase().includes(searchQuery.toLowerCase())"  
+                            class="list-group-item d-flex justify-content-between align-items-start"> <!-- STRINGA DI RICERCA CONTATTO -->
 
                                 <div class="ms-2 me-auto">
 
@@ -134,7 +135,7 @@
 
                                             <h3 class="chat-title fw-bold">{{ contact.name }}</h3>
 
-                                            <p class="chat-description">{{ contact.messages[0].message }}</p>
+                                            <p class="chat-description">{{ contact.messages[contact.messages.length - 1].message }}</p>
 
                                         </div>
 
@@ -150,13 +151,13 @@
 
                     </div>
 
-                    
-                        
+
+
                 </div>
                 <!---------------------------------------->
                 <!-- MESSAGING CHAT -->
                 <div class="right-side sticky-top ">
-                    
+
                     <div class="header-account">
 
                         <nav class="navbar  border">
@@ -211,13 +212,13 @@
                             <div v-for="(message, index) in activeContact.messages" :key="index" :class="message.status === 'sent' ? 'message user' : 'message'">
 
                                 <div class="text position-relative ">
-                                    
+
                                     <div class="p-2">{{message.message}}</div>
 
                                     <div class="received-at"><p class="chat-description">{{ activeContact.messages[activeContact.messages.length - 1].date }}</p></div>
                                 </div>
 
-                                
+
                             </div>
 
                         </div>
@@ -232,7 +233,7 @@
 
                                 <div class="chat-messages">
 
-                                    
+
                                 </div>
 
                                 <div class="input-group chat-input">
@@ -242,7 +243,7 @@
                                         <i class="fa-regular fa-face-laugh-wink fa-lg"></i>
 
                                     </div>
-                                    
+
                                     <textarea v-model="newMessage" @keyup.enter="addMessage" id="message-input" class="form-control" placeholder="Scrivi un messaggio" >
 
                                     </textarea>
@@ -250,7 +251,7 @@
                                     <div class="input-group-append m-3 text-center">
 
                                         <i class="fa-solid fa-microphone fa-lg"></i>
-                                        
+
                                     </div>
 
                                 </div>
@@ -259,14 +260,14 @@
 
                         </div>
 
-                    </div> 
+                    </div>
                     <!---------------------------------------->
 
                 </div>
 
 
             </div>
-    
+
         </div>
 
     </main>
