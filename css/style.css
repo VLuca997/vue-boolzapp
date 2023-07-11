@@ -179,10 +179,7 @@
         border-radius: 5px;
         width: 48%;
 }
-.chat-description{
-        margin: 5px;
 
-}
 .message.user .text {
         background-color: #dcf8c6;
 }
@@ -194,9 +191,11 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        font-size: 11px;
-        margin-top: 1px;
+        font-size: xx-small;
+        font-size: 5px;
+        margin: 5px;
+        color: grey;
 }
-.messages:last-child{
+ .messages:last-child{  /* STO STRONZO AD OGNI RIAVVIO CAMBIA, BOH */
         margin-bottom: 75px;
 }
